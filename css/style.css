@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto+Slab:wght@600;800&display=swap');
+/* Roboto Slab */
+/* Open Sans */
+:root{
+    --heavy-blue:rgb(0, 34, 185);
+    --light-blue:rgb(87, 112, 255);
+    --very-light-blue:rgb(134, 136, 247);
+
+    
+
+    font-size:18px;
+}
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    
+}
+
+body{
+    height:100vh;
+   margin:auto;
+    background-color: var(--light-blue);
+    
+}
+
+#main{
+    margin: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+    #main *{
+        width:100%;
+    }
+    .heading{
+        background-color: var(--heavy-blue);
+        text-align: center;
+        margin-bottom: 2rem;
+        border-radius: 2px;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        -ms-border-radius: 2px;
+        -o-border-radius: 2px;
+        box-shadow: 0 0 20px -10px rgb(77, 76, 76);
+}
+        #title{
+            font-family: "Roboto Slab" ,sans-serif ;
+            font-weight: 800;
+            font-size: 2.5rem;
+        }
+
+        .sub-head{
+            font-family: "Roboto Slab" ,sans-serif ;
+            margin: .5rem 0;
+        }
+
+    #img-div{
+        background-color: var(--very-light-blue);
+        height:auto;
+        width:100%;
+        border-radius: 2px;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        -ms-border-radius: 2px;
+        -o-border-radius: 2px;
+        box-shadow: 0 0 20px -10px rgb(175, 175, 175);
+    }
+            #image{
+                max-height:20rem;
+                display:block;
+                margin: auto;
+                max-width:100%;
+            }
+            #img-caption{
+                font-family:"Open Sans" ;
+                margin:1rem 0;
+                text-align: center;
+                font-style: oblique;
+            }
+    #tribute-info{
+        margin:2rem 0;
+        padding:2rem;
+        background-color: var(--very-light-blue);
+        box-shadow: 0 0 20px -10px rgb(54, 54, 54);
+        border-radius: 2px;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        -ms-border-radius: 2px;
+        -o-border-radius: 2px;
+        counter-reset: h2;
+    }
+            h2{
+                margin:2rem 0 0;
+                font-family: "Roboto Slab";
+                font-weight: 600;
+                font-size: 1.8rem;
+            }
+            h2::before{
+                counter-increment: h2;
+                content: counter(h2)".";
+            }
+            p{
+                font-family: "Open Sans";
+                font-weight: 400;
+                line-height: 1.5;
+            }
+            q{
+                font-style: italic;
+            }
+
+
+    footer{
+    position: fixed;
+    bottom: 0;
+    left:50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    font-family: "Open Sans";
+}
+    footer a:link{
+        color:rgb(255, 0, 0);
+    }
+    footer a:visited{
+        color: purple;
+    }
+
+@media(max-width:500px){
+    :root{
+        font-size: 15px;
+    }
+}
